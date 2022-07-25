@@ -11,9 +11,21 @@
  * Execute: Use `node lessons/simple.js` to run the test.
  */
 
-const {sum, subtract} = require('../math')
+const { sum, subtract } = require('../math');
 
-let result, expected
+test('sum adds numbers', () => {
+  const result = sum(3, 7);
+  const expected = 10;
+  expect(result).tobe(expected);
+});
+
+test('subtract subtracts numbers', () => {
+  const result = subtract(7, 3);
+  const expected = 4;
+  expect(result).tobe(expected);
+});
+
+
 
 /**
  * Hint: there's no magic, just the most straightforward conditional statement.
